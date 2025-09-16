@@ -31,8 +31,7 @@ def preprocess(resume):
   text= resume.lower()
   text =text.split()
   text =[words for words in text if words not in sw]
-  text =[lemmatizer.lemmatize(word) for word in text]
-  #text =[stemmer.stem(word) for word in text]
+
   return " ".join(text)
 
 def extract_file(resume):
